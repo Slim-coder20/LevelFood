@@ -1,0 +1,92 @@
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 12rem);
+  padding: 2rem 1.5rem 4rem;
+  margin: 0 auto;
+  max-width: 36rem;
+  text-align: center;
+}
+
+/* Grand « 404 » décoratif aligné avec le titre hero du site */
+.notFound::before {
+  content: "404";
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(4.5rem, 14vw, 9rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  background: linear-gradient(120deg, #f9572a 0%, #ffc905 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.75rem;
+  filter: drop-shadow(0 0.35rem 1.5rem rgba(249, 87, 42, 0.25));
+}
+
+.notFound p {
+  margin: 0 0 1.75rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #ddd6cb;
+}
+
+@media (min-width: 768px) {
+  .notFound {
+    min-height: calc(100vh - 14rem);
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+  }
+
+  .notFound p {
+    font-size: 1.2rem;
+  }
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #1a1a1a;
+  background: linear-gradient(90deg, #f9572a, #ffc905);
+  border: none;
+  border-radius: 0.35rem;
+  box-shadow:
+    0 0.15rem 0 #c73e1d,
+    0 0.5rem 1.25rem rgba(249, 87, 42, 0.35);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    filter 0.15s ease;
+}
+
+.link:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0.2rem 0 #c73e1d,
+    0 0.65rem 1.5rem rgba(249, 87, 42, 0.45);
+  filter: brightness(1.05);
+}
+
+.link:focus-visible {
+  outline: 2px solid #ffc905;
+  outline-offset: 3px;
+}
+
+.link:active {
+  transform: translateY(0);
+  box-shadow:
+    0 0.08rem 0 #c73e1d,
+    0 0.25rem 0.75rem rgba(249, 87, 42, 0.3);
+}
