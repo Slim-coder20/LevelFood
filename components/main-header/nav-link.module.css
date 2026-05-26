@@ -2,8 +2,9 @@
   text-decoration: none;
   color: #ddd6cb;
   font-weight: bold;
-  padding: 0.5rem 1rem;
+  padding: 0.35rem 0.65rem;
   border-radius: 0.5rem;
+  font-size: 0.9rem;
 }
 
 .link:hover,
@@ -20,4 +21,18 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .link {
+    padding: 0.45rem 0.85rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .link {
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+  }
 }
