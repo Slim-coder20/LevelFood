@@ -19,7 +19,7 @@ export default function Meals() {
         </p>
       </header>
       <main className={styles.main}>
-        <MealsGrid />
+        <MealsGrid meals={[]}/>
       </main>
     </>
   );
