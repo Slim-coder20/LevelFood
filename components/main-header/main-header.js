@@ -22,7 +22,7 @@ export default function MainHeader() {
             height={35}
             priority
           />
-          NextLevel Food
+          Level Food
         </Link>
         {/* Navbar Application  */}
         <nav className={styles.nav}>

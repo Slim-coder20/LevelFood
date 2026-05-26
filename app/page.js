@@ -12,7 +12,7 @@ export default function Home() {
         <div className={styles.content}>
           <div className={styles.hero}>
             <h1 className={styles.heroTitle}>
-              NextLevel Food for NextLevel Foodies
+              Level Food for Level Foodies
             </h1>
             <p className={styles.heroSubtitle}>
               Taste & share food from all over the world.
