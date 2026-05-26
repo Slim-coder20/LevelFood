@@ -5,7 +5,7 @@ import { getMeals } from "@/lib/meals";
 import MealsLoading from "./loading-out";
 import { Suspense } from "react";
 
-
+// Cette fonction va servire à récupérer les repas de la base de données // 
 async function MealsFetch() {
   const meals = await getMeals();
   return <MealsGrid meals={meals} />;
@@ -28,6 +28,8 @@ export default function Meals() {
         </p>
       </header>
       <main className={styles.main}>
+        {/* Le composant Suspense de react va nous permettre de charger le 
+        composant MealsFetch de manière en affichant le composant MealsLoading en attendant que les données soient chargées */}
         <Suspense fallback={<MealsLoading />}>
           <MealsFetch />
         </Suspense>
