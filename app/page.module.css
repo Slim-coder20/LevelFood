@@ -11,12 +11,19 @@
   height: 25rem;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
 .hero {
   color: #ddd6cb;
   font-size: 1.5rem;
 }
 
-.hero h1 {
+.heroTitle {
   font-size: 2rem;
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
@@ -26,50 +33,77 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+.heroSubtitle {
+  margin: 0.5rem 0 0;
 }
 
 .cta {
   font-size: 1.5rem;
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 
-.cta a {
+.ctaLink {
   display: inline-block;
-  margin-top: 1rem;
+  color: #ff9b05;
+  font-weight: normal;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.ctaLink:hover,
+.ctaLink:active {
+  color: #f9b241;
+}
+
+.ctaButton {
+  display: inline-block;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   background: linear-gradient(90deg, #f9572a, #ff9b05);
   color: #ffffff;
   font-weight: bold;
   text-decoration: none;
+  transition: background 0.2s ease;
 }
 
-.cta a:hover,
-.cta a:active {
+.ctaButton:hover,
+.ctaButton:active {
   background: linear-gradient(90deg, #fd4715, #f9b241);
 }
 
-.cta a:first-child {
-  background: transparent;
-  font-weight: normal;
-  color: #ff9b05;
-  padding-left: 0;
-}
-
-.cta a:first-child:hover,
-.cta a:first-child:active {
-  background: transparent;
-  color: #f9b241;
+.main {
+  width: 90%;
+  max-width: 75rem;
+  margin: 0 auto 4rem;
 }
 
 .section {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
   color: #ddd6cb;
   font-size: 1.5rem;
   max-width: 50rem;
-  width: 90%;
   margin: 2rem auto;
   text-align: center;
+}
+
+.sectionTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  margin: 0;
+  background: linear-gradient(90deg, #f9572a, #ffc905);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section p {
+  margin: 0;
+  line-height: 1.6;
 }
