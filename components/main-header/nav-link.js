@@ -7,10 +7,16 @@ export default function Navlink({ href, children }) {
   const path = usePathname();
   return (
     <li>
-      <Link href={href} className={path.startsWith(href) ? styles.active : ""}>
+      <Link
+        href={href}
+        className={
+          path.startsWith(href)
+            ? `${styles.link} ${styles.active}`
+            : styles.link
+        }
+      >
         {children}
       </Link>
-      
     </li>
   );
 }
