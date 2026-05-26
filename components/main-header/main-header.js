@@ -1,10 +1,14 @@
+"use client";
 import Link from "next/link";
 import logoImg from "@/assets/logo.png";
 import styles from "./main-header.module.css";
 import Image from "next/image";
 import MainHeaderBackground from "./main-header-background";
+import { usePathname } from "next/navigation";
+import Navlink from "./nav-link";
 
 export default function MainHeader() {
+  const path = usePathname(); 
   return (
     <>
       <MainHeaderBackground />
@@ -23,12 +27,8 @@ export default function MainHeader() {
         {/* Navbar Application  */}
         <nav className={styles.nav}>
           <ul>
-            <li>
-              <Link href="/meals">Browse Meals </Link>
-            </li>
-            <li>
-              <Link href="/community">Foodies Community </Link>
-            </li>
+            <Navlink href="/meals">Browse Meals </Navlink>
+            <Navlink href="/community">Foodies Community </Navlink>
           </ul>
         </nav>
       </header>
