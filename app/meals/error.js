@@ -2,8 +2,8 @@
 export default function Error() {
   return (
     <main className="error">
-      <h1>An error occured!</h1>
-      <p>Failed to fetch meal data. Please try again later</p>
+      <h1>Meal not found!</h1>
+      <p>The meal you are looking for does not exist. Please try again.</p>
     </main>
   );
 }
